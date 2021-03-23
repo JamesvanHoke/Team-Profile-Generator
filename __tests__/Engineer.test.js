@@ -14,7 +14,7 @@ describe("Engineer", () => {
         "testEmail@email.com",
         "testGithub"
       );
-      
+
       expect(testObj.name).toBe("testName");
       expect(testObj.id).toBe(1);
       expect(testObj.email).toBe("testEmail@email.com");
@@ -39,7 +39,7 @@ describe("Engineer", () => {
         expect(testObj.getEmail()).toBe("testEmail@email.com");
       });
       it("should return the objects github", () => {
-        expect(testObj.getEmail()).toBe("testGithub");
+        expect(testObj.getGithub()).toBe("testGithub");
       });
       it("Should return the objects role", () => {
         expect(testObj.getRole()).toBe("Engineer");
