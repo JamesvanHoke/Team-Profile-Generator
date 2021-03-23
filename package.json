@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JamesvanHoke/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/JamesvanHoke/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/JamesvanHoke/Team-Profile-Generator#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
 }
