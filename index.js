@@ -3,6 +3,7 @@ const moreMembersFn = require("./src/moreMembersFn")
 const generateHTML = require("./src/GenerateHTML");
 const fs = require("fs");
 
+// First portion of our template HTML, does not contain closing scripts so we can append in our generated HTML
 const HTMLTemplate = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,7 @@ const HTMLTemplate = `<!DOCTYPE html>
 <div class= "row col-12">
 `;
 
+// Contains our closing HTML elements to complete the page
 const HTMLTemplateEnd = `
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
@@ -44,7 +46,7 @@ async function init() {
     // Appends our newly created cards to the index.html
     fs.appendFile("./dist/index.html", teamToCard, (err) => {if (err) {console.error(err);}});  
     
-    // runs an inquirer prompt asking if they user wants to add another team member
+    // runs an inquirer prompt and waits for the response asking if they user wants to add another team member. if they don't want to add any more members, changes moreMembers variable to false exiting out of our while loop.
     moreMembers = await moreMembersFn()
 }
 // Tacks on our end html template parts

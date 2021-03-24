@@ -1,8 +1,10 @@
+// Takes in our user responses as a parameter
 const generatedEmployeeCard = function (employee) {
+  // Initialize variables so we can assign them
   let roleSpecific;
   let roleIcon;
 
-  // console.log (employee.getRole())
+  // Switch function to check which is passed in and assign the role specific HTML content to a variable to we can pass it in later.
     switch (employee.getRole()) {
       case "Manager":
         roleSpecific = `Office Number: ${employee.getOfficeNumber()}`;
@@ -20,6 +22,7 @@ const generatedEmployeeCard = function (employee) {
         break;
     }
   
+    //Returns back our generated HTML Cards
   return`
   <div class="card col-12 col-md-6 col-lg-4 m-4 p-0">
   <div class="card-header bg-primary text-light">
