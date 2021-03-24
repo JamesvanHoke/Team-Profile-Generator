@@ -1,18 +1,9 @@
-/* Tests
-Check if we can create an employee object,✅
-Check if we can assign a name to employee,✅
-Check if we can assign an ID to employee,✅
-Check if we can assign an Email to employee,✅
-Check if we can get a name via getName() method,✅
-Check if we can get a ID via getId() method,✅
-Check if we can get a Email via getEmail() method,✅
-Check if we can get a Role via getRole() method,✅
-*/
-
 const Employee = require("../lib/Employee");
 
+//Primary Class
 describe("Employee", () => {
 
+  //Object initialization.
   describe("Init", () => {
 
     it("should be able to create an Employee object", () => {
@@ -28,6 +19,7 @@ describe("Employee", () => {
     });
   });
 
+  //Can we use our methods on it
   describe("getMethods", () => {
     const testObj = new Employee("testName", 1, "testEmail@email.com");
 
