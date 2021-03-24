@@ -2,7 +2,7 @@ const generatedEmployeeCard = function (employee) {
   let roleSpecific;
   let roleIcon;
 
-  console.log (employee.getRole())
+  // console.log (employee.getRole())
     switch (employee.getRole()) {
       case "Manager":
         roleSpecific = `Office Number: ${employee.getOfficeNumber()}`;
