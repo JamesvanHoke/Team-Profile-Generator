@@ -9,7 +9,7 @@ const generatedEmployeeCard = function (employee) {
         roleIcon = "👨‍💼"
         break;
       case "Engineer":
-        roleSpecific = `Github: <a href="https://github.com/${employee.getGithub()}">${employee.getGithub()}</a>`;
+        roleSpecific = `Github: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>`;
         roleIcon = "⌨"
         break;
       case "Intern":
