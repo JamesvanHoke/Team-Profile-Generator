@@ -1,25 +1,30 @@
 const generatedEmployeeCard = function (employee) {
   let roleSpecific;
+  let roleIcon;
+
   console.log (employee.getRole())
     switch (employee.getRole()) {
       case "Manager":
         roleSpecific = `Office Number: ${employee.getOfficeNumber()}`;
+        roleIcon = "👨‍💼"
         break;
       case "Engineer":
         roleSpecific = `Github: <a href="https://github.com/${employee.getGithub()}">${employee.getGithub()}</a>`;
+        roleIcon = "⌨"
         break;
       case "Intern":
         roleSpecific = `School: ${employee.getSchool()}`;
+        roleIcon = "👨‍🎓"
         break;
       default:
         break;
     }
   
   return`
-  <div class="card col-12 col-md-6 col-lg-4 m-4">
+  <div class="card col-12 col-md-6 col-lg-4 m-4 p-0">
   <div class="card-header bg-primary text-light">
       <h3 class="card-name">${employee.getName()}</h3>
-      <h4 class="card-role">${employee.getRole()}</h4>
+      <h4 class="card-role">${roleIcon} ${employee.getRole()}</h4>
   </div>
   <div class="card-body">
       <ul class="card-contents">
